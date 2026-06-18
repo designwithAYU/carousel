@@ -1,0 +1,24 @@
+// Test Sass is working
+$primary-color: #ff4d6d;
+
+body {
+  background: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+// Bootstrap import (optional but good test)
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Custom test button
+.test-btn {
+  background-color: $primary-color;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
