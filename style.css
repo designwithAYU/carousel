@@ -1,55 +1,257 @@
-header{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 10px;
-    display: flex;
-    justify-content: right;
-    align-items: end;
-    background:black;
+```css
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
 }
 
-header .btn{
-    color: white;
-
-}
-.hero .hero-text{
-    font-family: 'Times New Roman', Times, serif;
-    color: white;
-    font-size: 80px;
-    text-align: left;
-    margin-top: 100px;
+body{
+    background:#f8f9fa;
+    overflow-x:hidden;
 }
 
-.hero .icon-btn{
+/* =========================
+   Navbar
+========================= */
 
-    background:rgb(229, 87, 111);
-    margin-top: 3px;
+.navbar{
+    padding:15px 0;
+    transition:0.3s ease;
+}
 
+.navbar-brand{
+    font-size:1.8rem;
+    letter-spacing:1px;
+}
+
+.nav-link{
+    margin:0 8px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-link:hover{
+    color:#ffc107 !important;
+}
+
+/* =========================
+   Hero Section
+========================= */
+
+.hero-section{
+    min-height:90vh;
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
+    ),
+    url("https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1920");
+    
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.hero-section h1{
+    font-size:4rem;
+    font-weight:800;
+    animation:fadeUp 1s ease;
+}
+
+.hero-section p{
+    max-width:700px;
+    margin:auto;
+    animation:fadeUp 1.2s ease;
+}
+
+.hero-section .btn{
+    animation:fadeUp 1.4s ease;
+}
+
+/* =========================
+   Categories
+========================= */
+
+.category-card{
+    background:white;
+    transition:0.4s ease;
+    cursor:pointer;
+}
+
+.category-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+.category-card i{
+    color:#ffc107;
+}
+
+/* =========================
+   Product Cards
+========================= */
+
+.product-card{
+    border:none;
+    overflow:hidden;
+    transition:0.4s ease;
+}
+
+.product-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.product-card img{
+    height:250px;
+    object-fit:cover;
+    transition:0.5s ease;
+}
+
+.product-card:hover img{
+    transform:scale(1.08);
+}
+
+.card-title{
+    font-weight:600;
+}
+
+.add-cart{
+    width:100%;
+    transition:0.3s ease;
+    font-weight:600;
+}
+
+.add-cart:hover{
+    transform:scale(1.04);
+}
+
+/* =========================
+   Features Section
+========================= */
+
+.bi-truck,
+.bi-shield-check,
+.bi-award{
+    transition:0.3s ease;
+}
+
+.col-md-4:hover i{
+    transform:scale(1.2);
+}
+
+/* =========================
+   Newsletter
+========================= */
+
+.input-group input{
+    border:none;
+    padding:14px;
+}
+
+.input-group button{
+    font-weight:600;
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer i{
+    font-size:1.3rem;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+footer i:hover{
+    color:#ffc107;
+}
+
+footer{
+    border-top:1px solid rgba(255,255,255,0.1);
+}
+
+/* =========================
+   Cart Badge
+========================= */
+
+#cart-count{
+    font-size:0.75rem;
+}
+
+/* =========================
+   Buttons
+========================= */
+
+.btn-warning{
+    font-weight:600;
+}
+
+.btn-warning:hover{
+    transform:translateY(-2px);
+}
+
+/* =========================
+   Animations
+========================= */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 
 }
 
-.carousel-indicators [data-bs-target]{
-    width: 12px !important;
-    height: 12px !important;
-    border-radius: 50% !important;
-    margin: 0 6px !important;
-    background-color: white;
-    opacity: 0.5;
-   
+/* =========================
+   Responsive
+========================= */
+
+@media(max-width:992px){
+
+    .hero-section h1{
+        font-size:3rem;
+    }
+
 }
 
-.carousel-indicators .active{
-    opacity: 1 !important;
+@media(max-width:768px){
+
+    .hero-section{
+        text-align:center;
+        min-height:80vh;
+    }
+
+    .hero-section h1{
+        font-size:2.5rem;
+    }
+
+    .hero-section p{
+        font-size:1rem;
+    }
+
 }
 
+@media(max-width:576px){
 
+    .hero-section h1{
+        font-size:2rem;
+    }
 
+    .navbar-brand{
+        font-size:1.5rem;
+    }
 
-
-
-
-
-.carousel-image{
-    height:100vh;
-    object-fit: cover;
- 
 }
+```
